@@ -183,7 +183,7 @@
 		9424DDB3171100620059EF14 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		9424DDB7171100A60059EF14 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		9424DDD4171102D60059EF14 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		9424DDD5171104730059EF14 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		9424DDD5171104730059EF14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9424DDD71711090F0059EF14 /* PLStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLStartup.h; sourceTree = "<group>"; };
 		9424DDD81711090F0059EF14 /* PLStartup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLStartup.m; sourceTree = "<group>"; };
 		9424DDE517110F560059EF14 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -282,7 +282,7 @@
 		35A4B24F833857DFB3F35934 = {
 			isa = PBXGroup;
 			children = (
-				9424DDD5171104730059EF14 /* README */,
+				9424DDD5171104730059EF14 /* README.md */,
 				9424DDB7171100A60059EF14 /* Dev.xcconfig */,
 				9424DDB3171100620059EF14 /* Prod.xcconfig */,
 				9424DDD4171102D60059EF14 /* Shared.xcconfig */,
