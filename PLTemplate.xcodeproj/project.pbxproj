@@ -47,7 +47,6 @@
 		9424DDEB17110F570059EF14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE717110F560059EF14 /* Security.framework */; };
 		9424DDEC17110F570059EF14 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE817110F570059EF14 /* SystemConfiguration.framework */; };
 		9424DDFF171111660059EF14 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9424DDFB171111660059EF14 /* Base64.m */; };
-		94358C2F17123DEA0014DF4A /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358C2817123DA90014DF4A /* libRestKit.a */; };
 		94358C3C171240C40014DF4A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 94358C37171240C40014DF4A /* MBProgressHUD.m */; };
 		9444CCAD17113DBE0014C082 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444CC9117113DBE0014C082 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9444CCAE17113DBE0014C082 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444CC9417113DBE0014C082 /* CDataScanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -64,6 +63,7 @@
 		9497315F171299D5002A8AB0 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497315D171299D5002A8AB0 /* NSDate+Helper.m */; };
 		94973160171299D5002A8AB0 /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 9497315E171299D5002A8AB0 /* README.textile */; };
 		9497316117129BEE002A8AB0 /* entities.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4BA9A1985E727203464E3 /* entities.strings */; };
+		94ADBC0917133D2000FD3372 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358C2817123DA90014DF4A /* libRestKit.a */; };
 		94E801FF1712157400AFE31C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E801FE1712157400AFE31C /* CFNetwork.framework */; };
 		94ECAF6A17113A3500828BAA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ECAF6917113A3500828BAA /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
@@ -251,7 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94358C2F17123DEA0014DF4A /* libRestKit.a in Frameworks */,
+				94ADBC0917133D2000FD3372 /* libRestKit.a in Frameworks */,
 				94E801FF1712157400AFE31C /* CFNetwork.framework in Frameworks */,
 				94ECAF6A17113A3500828BAA /* Crashlytics.framework in Frameworks */,
 				9424DDE917110F570059EF14 /* CoreLocation.framework in Frameworks */,
