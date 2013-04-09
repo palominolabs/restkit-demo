@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29E8A6BB9B46412B9EDF1743 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A507780D3AB6410281E26F9C /* libPods.a */; };
 		35A4B041C28C22AEE734FE56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4B1D48A42BC1BCFA2C8AB /* InfoPlist.strings */; };
 		35A4B09D56C4FA16FF8494C3 /* NSFileHandle+STAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B44D500515DB9F4F1ABB /* NSFileHandle+STAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		35A4B1BBFE9230E467EB7309 /* NSDictionary+STAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BEE99C0575E657A8C68B /* NSDictionary+STAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -47,13 +48,10 @@
 		9424DDEB17110F570059EF14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE717110F560059EF14 /* Security.framework */; };
 		9424DDEC17110F570059EF14 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE817110F570059EF14 /* SystemConfiguration.framework */; };
 		9424DDFF171111660059EF14 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9424DDFB171111660059EF14 /* Base64.m */; };
-		94358C3C171240C40014DF4A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 94358C37171240C40014DF4A /* MBProgressHUD.m */; };
-		9444CCAD17113DBE0014C082 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444CC9117113DBE0014C082 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9497313F171296FC002A8AB0 /* NSDictionary+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497313E171296FC002A8AB0 /* NSDictionary+Convenience.m */; };
 		9497315F171299D5002A8AB0 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497315D171299D5002A8AB0 /* NSDate+Helper.m */; };
 		94973160171299D5002A8AB0 /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 9497315E171299D5002A8AB0 /* README.textile */; };
 		9497316117129BEE002A8AB0 /* entities.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4BA9A1985E727203464E3 /* entities.strings */; };
-		94ADBC0917133D2000FD3372 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358C2817123DA90014DF4A /* libRestKit.a */; };
 		94E801FF1712157400AFE31C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E801FE1712157400AFE31C /* CFNetwork.framework */; };
 		94ECAF6A17113A3500828BAA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ECAF6917113A3500828BAA /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
@@ -65,41 +63,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 35A4B4351C4C759DF79F7A15;
 			remoteInfo = PLTemplate;
-		};
-		94358C2717123DA90014DF4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94358C2017123DA80014DF4A /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D1614564E810060A5C5;
-			remoteInfo = RestKit;
-		};
-		94358C2917123DA90014DF4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94358C2017123DA80014DF4A /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D2614564E820060A5C5;
-			remoteInfo = RestKitTests;
-		};
-		94358C2B17123DA90014DF4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94358C2017123DA80014DF4A /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E62145651060060A5C5;
-			remoteInfo = RestKitFramework;
-		};
-		94358C2D17123DA90014DF4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94358C2017123DA80014DF4A /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E78145651060060A5C5;
-			remoteInfo = RestKitFrameworkTests;
-		};
-		94358C3017123E090014DF4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94358C2017123DA80014DF4A /* RestKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 25160D1514564E810060A5C5;
-			remoteInfo = RestKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -185,21 +148,15 @@
 		9424DDFC171111660059EF14 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
 		9424DDFD171111660059EF14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9424DDFE171111660059EF14 /* RELEASE NOTES.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "RELEASE NOTES.md"; sourceTree = "<group>"; };
-		94358C2017123DA80014DF4A /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Lib/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
-		94358C35171240C40014DF4A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		94358C36171240C40014DF4A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		94358C37171240C40014DF4A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		94358C38171240C40014DF4A /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
-		9444CC9017113DBE0014C082 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		9444CC9117113DBE0014C082 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		9497313D171296FC002A8AB0 /* NSDictionary+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Convenience.h"; sourceTree = "<group>"; };
 		9497313E171296FC002A8AB0 /* NSDictionary+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Convenience.m"; sourceTree = "<group>"; };
 		9497315C171299D5002A8AB0 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		9497315D171299D5002A8AB0 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		9497315E171299D5002A8AB0 /* README.textile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.textile; sourceTree = "<group>"; };
 		94E801FE1712157400AFE31C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		94E8020017121B2100AFE31C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		94ECAF6917113A3500828BAA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		A507780D3AB6410281E26F9C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD719EAA3C3492EAD086703 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +175,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94ADBC0917133D2000FD3372 /* libRestKit.a in Frameworks */,
 				94E801FF1712157400AFE31C /* CFNetwork.framework in Frameworks */,
 				94ECAF6A17113A3500828BAA /* Crashlytics.framework in Frameworks */,
 				9424DDE917110F570059EF14 /* CoreLocation.framework in Frameworks */,
@@ -230,6 +186,7 @@
 				35A4B8E02CD1D35E660E2673 /* CoreGraphics.framework in Frameworks */,
 				35A4BBF363029B89AF13ACA6 /* CoreData.framework in Frameworks */,
 				35A4BA7072A9C80CEB3E6C38 /* libGoogleAnalytics.a in Frameworks */,
+				29E8A6BB9B46412B9EDF1743 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +215,7 @@
 				35A4BBF7C70740E51179CA95 /* PLTemplate */,
 				35A4BA76EAC5853183EC8FC8 /* PLTemplateTests */,
 				35A4BD1B2C6DF0CF937C5E17 /* Lib */,
+				ECD719EAA3C3492EAD086703 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,12 +292,12 @@
 				9424DDE617110F560059EF14 /* MobileCoreServices.framework */,
 				9424DDE717110F560059EF14 /* Security.framework */,
 				9424DDE817110F570059EF14 /* SystemConfiguration.framework */,
-				94358C2017123DA80014DF4A /* RestKit.xcodeproj */,
 				35A4B2F391565CC15C7719D4 /* UIKit.framework */,
 				35A4BB153ADA8233EA0031B5 /* Foundation.framework */,
 				35A4BEE69A6B43FC26502E05 /* CoreGraphics.framework */,
 				35A4B150C52F31D63DC8A244 /* CoreData.framework */,
 				35A4B38406799A7AC080B794 /* SenTestingKit.framework */,
+				A507780D3AB6410281E26F9C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -423,8 +381,6 @@
 			isa = PBXGroup;
 			children = (
 				9497315B171299D5002A8AB0 /* NSDate-Helper */,
-				94358C32171240C40014DF4A /* MBProgressHUD */,
-				9444CC8F17113DBE0014C082 /* OpenUDID */,
 				9424DDF8171111660059EF14 /* Base64 */,
 				35A4BC4A26A1A81BF2C2C3D5 /* STUtils */,
 				35A4B18BFFBE7BA4561B395C /* GoogleAnalytics */,
@@ -475,38 +431,6 @@
 			path = Base64;
 			sourceTree = "<group>";
 		};
-		94358C2117123DA80014DF4A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				94358C2817123DA90014DF4A /* libRestKit.a */,
-				94358C2A17123DA90014DF4A /* RestKitTests.octest */,
-				94358C2C17123DA90014DF4A /* RestKit.framework */,
-				94358C2E17123DA90014DF4A /* RestKitFrameworkTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		94358C32171240C40014DF4A /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				94358C36171240C40014DF4A /* MBProgressHUD.h */,
-				94358C37171240C40014DF4A /* MBProgressHUD.m */,
-				94358C35171240C40014DF4A /* LICENSE */,
-				94358C38171240C40014DF4A /* README.mdown */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		9444CC8F17113DBE0014C082 /* OpenUDID */ = {
-			isa = PBXGroup;
-			children = (
-				9444CC9017113DBE0014C082 /* OpenUDID.h */,
-				9444CC9117113DBE0014C082 /* OpenUDID.m */,
-				94E8020017121B2100AFE31C /* README.md */,
-			);
-			path = OpenUDID;
-			sourceTree = "<group>";
-		};
 		9497315B171299D5002A8AB0 /* NSDate-Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,11 +452,11 @@
 				35A4BF8F9E7927BD1A656456 /* Frameworks */,
 				35A4B2132CB54EC48750A81D /* Resources */,
 				94ECAF681711396300828BAA /* ShellScript */,
+				750F00A232374562A8F43278 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				94358C3117123E090014DF4A /* PBXTargetDependency */,
 			);
 			name = PLTemplate;
 			productName = PLTemplate;
@@ -576,12 +500,6 @@
 			mainGroup = 35A4B24F833857DFB3F35934;
 			productRefGroup = 35A4B665BB419242D03B5A60 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 94358C2117123DA80014DF4A /* Products */;
-					ProjectRef = 94358C2017123DA80014DF4A /* RestKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				35A4B4351C4C759DF79F7A15 /* PLTemplate */,
@@ -589,37 +507,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		94358C2817123DA90014DF4A /* libRestKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRestKit.a;
-			remoteRef = 94358C2717123DA90014DF4A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		94358C2A17123DA90014DF4A /* RestKitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitTests.octest;
-			remoteRef = 94358C2917123DA90014DF4A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		94358C2C17123DA90014DF4A /* RestKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RestKit.framework;
-			remoteRef = 94358C2B17123DA90014DF4A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		94358C2E17123DA90014DF4A /* RestKitFrameworkTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitFrameworkTests.octest;
-			remoteRef = 94358C2D17123DA90014DF4A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		35A4B2132CB54EC48750A81D /* Resources */ = {
@@ -658,6 +545,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		750F00A232374562A8F43278 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
 		94ECAF681711396300828BAA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -706,8 +607,6 @@
 				35A4B619E91654C03A6E0CD3 /* KISSMetricsAPI.m in Sources */,
 				9424DDD91711090F0059EF14 /* PLStartup.m in Sources */,
 				9424DDFF171111660059EF14 /* Base64.m in Sources */,
-				9444CCAD17113DBE0014C082 /* OpenUDID.m in Sources */,
-				94358C3C171240C40014DF4A /* MBProgressHUD.m in Sources */,
 				35A4B4DCADE13F8AF594410F /* NSUserDefaults+Namespacing.m in Sources */,
 				35A4B4A6B40D266B17091B3C /* NSString+Convenience.m in Sources */,
 				9497313F171296FC002A8AB0 /* NSDictionary+Convenience.m in Sources */,
@@ -722,11 +621,6 @@
 			isa = PBXTargetDependency;
 			target = 35A4B4351C4C759DF79F7A15 /* PLTemplate */;
 			targetProxy = 35A4B8596AF7E7364948D3C1 /* PBXContainerItemProxy */;
-		};
-		94358C3117123E090014DF4A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RestKit;
-			targetProxy = 94358C3017123E090014DF4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -785,6 +679,7 @@
 		};
 		9424DDB5171100850059EF14 /* Prod */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD719EAA3C3492EAD086703 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -857,6 +752,7 @@
 		};
 		9424DDB9171100AD0059EF14 /* Dev */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD719EAA3C3492EAD086703 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
