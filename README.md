@@ -1,3 +1,18 @@
+# Overview
+
+This repo contains an empty iOS app setup with Dev/Prod schemes, a Podfile with some useful libraries we always use and some vendored things that are homegrown and/or don't have pods. For all new iOS projects fork this repo to quickly get these goodies.
+
+# Initial setup
+
+1. Fork the pltemplate repo and clone the fork to your machine.
+1. If you don't already have it install the Cocoapods gem.
+1. From the fork's clone directory run <tt>pod install</tt>. Never again open the xcodeproj again; always open the xccworkspace instead.
+1. You probably want to rename the projects/targets/etc. Do this from XCode for safety. To rename one of these things double click on it slowly. It should change to a textfield you can edit. Hopefully when you do it this way Xcode will do the right thing with changing build settings/pbxproj/file names/plist/etc
+1. Prod/staging settings are checked in but this is annoying for dev settings since everyone has their own. To handle this dev settings are in <tt>Dev.xcconfig</tt>. This is gitignored and instead <tt>Dev.xcconfig.template</tt> is checked in. Copy <tt>Dev.xcconfig.template</tt> to <tt>Dev.xcconfig</tt> and modify as appropriate. If you ever change <tt>Dev.xcconfig</tt> (e. g. to add a new endpoint config or analytics key) make sure to update <tt>Dev.xcconfig.template</tt> too so that future developers aren't puzzled by missing configs.
+
+
+We use [Cocoapods](http://cocoapods.org/) for dependency management. Make sure you have a recent Ruby (>= 1.9.3) and the Cocoapods gem installed. Then, in the fork directory
+
 # Third Party Libraries
 ## KISSMetrics
 If you want KISSMetrics support:

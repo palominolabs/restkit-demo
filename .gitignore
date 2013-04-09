@@ -3,7 +3,6 @@
 *.swp
 .LSOverride
 
-
 # XCode
 *~.nib
 
@@ -21,8 +20,10 @@ build/
 xcuserdata
 
 
+<<<<<<< HEAD
 # Idea
 .idea
+*.iml
 
 Debug.xcconfig
 
