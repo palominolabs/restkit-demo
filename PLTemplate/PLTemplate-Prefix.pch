@@ -16,7 +16,6 @@
     #import <CoreData/CoreData.h>
 
     #import <RestKit/RestKit.h>
-
     #import "KISSMetricsAPI.h"
     #import <Crashlytics/Crashlytics.h>
     #import "GAI.h"
