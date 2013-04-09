@@ -21,3 +21,6 @@ xcuserdata
 # CocoaPods
 Podfile.lock
 Pods
+
+# Dev-specific config
+Dev.xcconfig
