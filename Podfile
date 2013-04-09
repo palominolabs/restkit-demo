@@ -1,0 +1,7 @@
+pod 'RestKit', '~> 0.20.0'
+pod 'MBProgressHUD', '~> 0.6'
+pod 'GoogleAnalytics-iOS-SDK', '~> 2.0beta4'
+pod 'KISSmetrics', '~> 1.0.0'
+pod 'Base64nl', '~> 1.1'
+pod 'OpenUDID', '~> 1.0.0'
+pod 'NSDate+Helper', '~> 0.0.1'

@@ -1,0 +1,29 @@
+# Generic OSX cruft
+.DS_Store
+*.swp
+.LSOverride
+
+
+# XCode
+*~.nib
+
+# CocoaPods
+Podfile.lock
+Gemfile.lock
+Pods
+
+build/
+
+*.pbxuser
+*.perspective
+*.perspectivev3
+
+xcuserdata
+
+
+# Idea
+.idea
+
+Debug.xcconfig
+
+dev.local.xcconfig
