@@ -78,7 +78,9 @@ static PLStartup* sharedPL = nil;
     // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
     [GAI sharedInstance].dispatchInterval = 20;
     // Optional: set debug to YES for extra debugging information.
-    [GAI sharedInstance].debug = (bool)PL_GOOGLEANALYTICS_DEBUG;
+#if PL_GOOGLEANALYTICS_DEBUG
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose]
+#endif
     // Create tracker instance.
     GAITracker = [[GAI sharedInstance] trackerWithTrackingId:nsstr(PL_GOOGLEANALYTICS_API_KEY)];
 }

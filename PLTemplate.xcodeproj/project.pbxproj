@@ -45,7 +45,9 @@
 		9424DDEA17110F570059EF14 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE617110F560059EF14 /* MobileCoreServices.framework */; };
 		9424DDEB17110F570059EF14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE717110F560059EF14 /* Security.framework */; };
 		9424DDEC17110F570059EF14 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE817110F570059EF14 /* SystemConfiguration.framework */; };
-		947A22CD1713E93F009080D3 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 947A22CC1713E93F009080D3 /* libGoogleAnalytics.a */; };
+		947A22CD1713E93F009080D3 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 947A22CC1713E93F009080D3 /* libGoogleAnalyticsServices.a */; };
+		947EA57217C9E056006E993D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 947EA57117C9E056006E993D /* libz.dylib */; };
+		947EA57417C9E05D006E993D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947EA57317C9E05D006E993D /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9497313F171296FC002A8AB0 /* NSDictionary+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497313E171296FC002A8AB0 /* NSDictionary+Convenience.m */; };
 		9497316117129BEE002A8AB0 /* entities.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4BA9A1985E727203464E3 /* entities.strings */; };
 		94E801FF1712157400AFE31C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E801FE1712157400AFE31C /* CFNetwork.framework */; };
@@ -129,7 +131,9 @@
 		9424DDE617110F560059EF14 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9424DDE717110F560059EF14 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9424DDE817110F570059EF14 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		947A22CC1713E93F009080D3 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = "Pods/GoogleAnalytics-iOS-SDK/Library/libGoogleAnalytics.a"; sourceTree = "<group>"; };
+		947A22CC1713E93F009080D3 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = "Pods/GoogleAnalytics-iOS-SDK/Library/libGoogleAnalyticsServices.a"; sourceTree = "<group>"; };
+		947EA57117C9E056006E993D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		947EA57317C9E05D006E993D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9497313D171296FC002A8AB0 /* NSDictionary+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Convenience.h"; sourceTree = "<group>"; };
 		9497313E171296FC002A8AB0 /* NSDictionary+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Convenience.m"; sourceTree = "<group>"; };
 		94E801FE1712157400AFE31C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -152,7 +156,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				947A22CD1713E93F009080D3 /* libGoogleAnalytics.a in Frameworks */,
+				947EA57417C9E05D006E993D /* AdSupport.framework in Frameworks */,
+				947EA57217C9E056006E993D /* libz.dylib in Frameworks */,
+				947A22CD1713E93F009080D3 /* libGoogleAnalyticsServices.a in Frameworks */,
 				94E801FF1712157400AFE31C /* CFNetwork.framework in Frameworks */,
 				94ECAF6A17113A3500828BAA /* Crashlytics.framework in Frameworks */,
 				9424DDE917110F570059EF14 /* CoreLocation.framework in Frameworks */,
@@ -173,7 +179,6 @@
 		35A4B24F833857DFB3F35934 = {
 			isa = PBXGroup;
 			children = (
-				947A22CC1713E93F009080D3 /* libGoogleAnalytics.a */,
 				9424DDD5171104730059EF14 /* README.md */,
 				9424DDB7171100A60059EF14 /* Dev.xcconfig */,
 				9424DDB3171100620059EF14 /* Prod.xcconfig */,
@@ -230,6 +235,9 @@
 		35A4BA5605D11AD3D778C26D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				947EA57117C9E056006E993D /* libz.dylib */,
+				947A22CC1713E93F009080D3 /* libGoogleAnalyticsServices.a */,
+				947EA57317C9E05D006E993D /* AdSupport.framework */,
 				94E801FE1712157400AFE31C /* CFNetwork.framework */,
 				94ECAF6917113A3500828BAA /* Crashlytics.framework */,
 				9424DDE517110F560059EF14 /* CoreLocation.framework */,
@@ -612,7 +620,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Pods/GoogleAnalytics-iOS-SDK/Library\"",
+					"\"$(SRCROOT)/Pods/GoogleAnalytics-iOS-SDK/GoogleAnalytics/Library\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -698,7 +706,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Pods/GoogleAnalytics-iOS-SDK/Library\"",
+					"\"$(SRCROOT)/Pods/GoogleAnalytics-iOS-SDK/GoogleAnalytics/Library\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
