@@ -1,6 +1,6 @@
 pod 'RestKit', '0.20.3'
 pod 'MBProgressHUD', '0.7'
-pod 'GoogleAnalytics-iOS-SDK', '3.0.0'
+pod 'GoogleAnalytics-iOS-SDK', '3.0'
 pod 'KISSmetrics', '1.1.3'
 pod 'Base64nl', '1.1'
 pod 'OpenUDID', '1.0.0'
