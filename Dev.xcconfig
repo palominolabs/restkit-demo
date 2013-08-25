@@ -8,4 +8,13 @@ PL_GOOGLEANALYTICS_ENABLED=0
 PL_GOOGLEANALYTICS_API_KEY=""
 PL_GOOGLEANALYTICS_DEBUG=1
 
+//
+// NOTE: DON'T ADD ANYTHING TO THIS FILE YOU DON'T WANT OTHER DEVS TO HAVE
+//
+// If you want to add any configs specific to your local machine, create the file below
+// ...and then uncomment that line. It is already added to .gitignore so you won't accidentally
+// ...check it in
+//
+//#include "dev.local.xcconfig"
+
 #include "Shared.xcconfig"
