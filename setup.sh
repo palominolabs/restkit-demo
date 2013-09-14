@@ -35,4 +35,5 @@ while IFS= read -r -d $'\0' file_to_rename; do
 done < <(find -d . -name "*PLTemplate*" -print0)
 
 # Check for outdated pods
+echo "Check for outdated pods in the CocoaPods Podfile"
 pod outdated
