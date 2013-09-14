@@ -8,8 +8,7 @@ This repo contains an empty iOS app setup with Dev/Prod schemes, a Podfile with 
 1. If you don't already have it install the Cocoapods gem.
 1. From the fork's clone directory run <tt>pod install</tt>. Never again open the xcodeproj again; always open the xccworkspace instead.
 1. You probably want to rename the projects/targets/etc. Do this from XCode for safety. To rename one of these things double click on it slowly. It should change to a textfield you can edit. Hopefully when you do it this way Xcode will do the right thing with changing build settings/pbxproj/file names/plist/etc
-1. Prod/staging settings are checked in but this is annoying for dev settings since everyone has their own. To handle this dev settings are in <tt>Dev.xcconfig</tt>. This is gitignored and instead <tt>Dev.xcconfig.template</tt> is checked in. Copy <tt>Dev.xcconfig.template</tt> to <tt>Dev.xcconfig</tt> and modify as appropriate. If you ever change <tt>Dev.xcconfig</tt> (e. g. to add a new endpoint config or analytics key) make sure to update <tt>Dev.xcconfig.template</tt> too so that future developers aren't puzzled by missing configs.
-
+1. Prod/staging settings are checked in but this is annoying for dev settings since everyone has their own. To handle this, there are some base dev settings in <tt>Dev.xcconfig</tt> but <tt>Dev.xcconfig</tt> has a commented out line to include <tt>dev.local.xcconfig</tt>. If you want to add your own development settings that should not be shared by other developers, create this commented out file and uncomment the line. Git ignore is setup to ignore the file so you don't have to worry about it.
 
 We use [Cocoapods](http://cocoapods.org/) for dependency management. Make sure you have a recent Ruby (>= 1.9.3) and the Cocoapods gem installed. Then, in the fork directory
 
