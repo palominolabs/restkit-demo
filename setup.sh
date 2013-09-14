@@ -20,7 +20,6 @@ while IFS= read -r -d $'\0' file_to_rename; do
   # ...because the directory will be moved later (due to '-d' passed to 'find')
   basename=$(basename "$file_to_rename")
   replaced_basename=${basename//PLTemplate/$new_app_name}
-echo "Basename: $basename, New Basename: $replaced_basename"
   if [[ $replaced_basename == $basename ]]; then
     continue
   fi
@@ -31,7 +30,6 @@ echo "Basename: $basename, New Basename: $replaced_basename"
   if [[ $? == 0 ]]; then
     git mv "$file_to_rename" "$replaced_file_path"
   else
-    echo "mv -v $file_to_rename $replaced_file_path"
     mv -v "$file_to_rename" "$replaced_file_path"
   fi
 done < <(find -d . -name "*PLTemplate*" -print0)
