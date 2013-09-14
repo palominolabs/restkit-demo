@@ -34,3 +34,5 @@ while IFS= read -r -d $'\0' file_to_rename; do
   fi
 done < <(find -d . -name "*PLTemplate*" -print0)
 
+# Check for outdated pods
+pod outdated
