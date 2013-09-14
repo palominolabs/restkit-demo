@@ -40,6 +40,7 @@
 		35A4BF094A3F0BD1784A883B /* NSDate+STAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B182422AE1381D3458BF /* NSDate+STAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		35A4BFB92BA5F71B49179B8B /* STRandomization.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B21C907F0A26752D0198 /* STRandomization.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		53443945878642EA95B021F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 180BE055CC254920B574CE7A /* libPods.a */; };
+		941002AA17E43A00003537B8 /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 941002A917E43A00003537B8 /* GTMStackTrace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9424DDD91711090F0059EF14 /* PLStartup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9424DDD81711090F0059EF14 /* PLStartup.m */; };
 		9424DDE917110F570059EF14 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE517110F560059EF14 /* CoreLocation.framework */; };
 		9424DDEA17110F570059EF14 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9424DDE617110F560059EF14 /* MobileCoreServices.framework */; };
@@ -121,6 +122,10 @@
 		35A4BF767B3C8CFEB5008479 /* PLTemplateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "PLTemplateTests-Info.plist"; sourceTree = "<group>"; };
 		35A4BFE6F606FB4B07AFFC53 /* NSMutableString+STAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+STAdditions.h"; sourceTree = "<group>"; };
 		5C91336608124188A39D515D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		941002A617E43A00003537B8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		941002A717E43A00003537B8 /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMObjC2Runtime.h; sourceTree = "<group>"; };
+		941002A817E43A00003537B8 /* GTMStackTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMStackTrace.h; sourceTree = "<group>"; };
+		941002A917E43A00003537B8 /* GTMStackTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMStackTrace.m; sourceTree = "<group>"; };
 		9424DDB3171100620059EF14 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		9424DDB7171100A60059EF14 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		9424DDD4171102D60059EF14 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
@@ -332,6 +337,7 @@
 		35A4BD1B2C6DF0CF937C5E17 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				941002A517E43A00003537B8 /* GTM */,
 				35A4BC4A26A1A81BF2C2C3D5 /* STUtils */,
 			);
 			path = Lib;
@@ -357,6 +363,17 @@
 				35A4B0C39AF4FC8C9430AFC2 /* NSUserDefaults+Namespacing.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		941002A517E43A00003537B8 /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				941002A617E43A00003537B8 /* GTMDefines.h */,
+				941002A717E43A00003537B8 /* GTMObjC2Runtime.h */,
+				941002A817E43A00003537B8 /* GTMStackTrace.h */,
+				941002A917E43A00003537B8 /* GTMStackTrace.m */,
+			);
+			path = GTM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,6 +557,7 @@
 				35A4B4DCADE13F8AF594410F /* NSUserDefaults+Namespacing.m in Sources */,
 				35A4B4A6B40D266B17091B3C /* NSString+Convenience.m in Sources */,
 				9497313F171296FC002A8AB0 /* NSDictionary+Convenience.m in Sources */,
+				941002AA17E43A00003537B8 /* GTMStackTrace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
