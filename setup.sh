@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/bash --login
+
+ruby_version="1.9.3"
+gemset_name="plcocoapods"
 
 if [ "$#" == "0" ]; then
     echo "Usage: './setup.sh NEW_APP_NAME'"
@@ -6,6 +9,35 @@ if [ "$#" == "0" ]; then
     exit 1
 fi
 
+# Ensure dependencies are all present
+declare -a required_programs
+#make sure ruby is installed
+command -v ruby >/dev/null 2>&1 || required_programs=("${required_programs[@]}" "ruby")
+# check if bundler is installed
+command -v bundle >/dev/null 2>&1 || required_programs=("${required_programs[@]}" "bundler")
+command -v rvm >/dev/null 2>&1 || required_programs=("${required_programs[@]}" "rvm")
+if [[ ${#required_programs[@]} > 0 ]]; then
+    echo Missing required programs: "${required_programs[@]}" >&2
+    exit 1
+fi
+
+# Create gemset for this project
+echo "Create .versions.conf for this project: "$ruby_version@$gemset_name"..."
+rvm --create --versions-conf use "$ruby_version@$gemset_name"
+
+# Install cocoapods
+echo "Install Cocoapods and other gems..."
+bundle install
+
+# Install pods
+echo "Install pods..."
+pod install
+
+# Check for outdated pods
+echo "Check for outdated pods in the CocoaPods Podfile..."
+pod outdated
+
+exit
 
 new_app_name=$1
 
@@ -34,6 +66,3 @@ while IFS= read -r -d $'\0' file_to_rename; do
   fi
 done < <(find -d . -name "*PLTemplate*" -print0)
 
-# Check for outdated pods
-echo "Check for outdated pods in the CocoaPods Podfile"
-pod outdated
