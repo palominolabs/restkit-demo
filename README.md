@@ -5,9 +5,7 @@ This repo contains an empty iOS app setup with Dev/Prod schemes, a Podfile with 
 # Initial setup
 
 1. Fork the pltemplate repo and clone the fork to your machine.
-1. If you don't already have it install the Cocoapods gem.
-1. From the fork's clone directory run `pod install`. Never again open the xcodeproj again; always open the xccworkspace instead.
-1. Rename the project. A handy little tool sits in the repo root `setup.sh`. To rename the project, run the tool from the root like so `./setup.sh Awesomeo3000` (replace Awesome3000 with whatever you're naming your project)
+1. Setup the project. A handy little tool sits in the repo root `setup.sh`. To setup cocoapods and rename the project, run the tool from the root like so `./setup.sh Awesomeo3000` (replace Awesome3000 with whatever you're naming your project)
 1. Prod/staging settings are checked in but this is annoying for dev settings since everyone has their own. To handle this, there are some base dev settings in `Dev.xcconfig` but `Dev.xcconfig` has a commented out line to include `dev.local.xcconfig`. If you want to add your own development settings that should not be shared by other developers, create this commented out file and uncomment the line. Git ignore is setup to ignore the file so you don't have to worry about it.
 
 We use [Cocoapods](http://cocoapods.org/) for dependency management. Make sure you have a recent Ruby (>= 1.9.3) and the Cocoapods gem installed. Then, in the fork directory
