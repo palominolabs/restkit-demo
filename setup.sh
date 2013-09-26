@@ -37,8 +37,6 @@ pod install
 echo "Check for outdated pods in the CocoaPods Podfile..."
 pod outdated
 
-exit
-
 new_app_name=$1
 
 echo "Replacing all instances of 'PLTemplate' in files with '$new_app_name'"
