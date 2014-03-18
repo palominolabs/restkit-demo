@@ -1,0 +1,4 @@
+ruby=ruby-1.9.3-p484
+ruby-gemset=plcocoapods
+#ruby-gem-install=bundler rake
+#ruby-bundle-install=true
