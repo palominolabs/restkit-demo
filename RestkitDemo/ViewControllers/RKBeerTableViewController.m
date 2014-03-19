@@ -5,7 +5,7 @@
 #import "RKBeerTableViewController.h"
 #import "RKBeer.h"
 #import "RKBeerTableViewCell.h"
-#import "RKBeerViewController.h"
+#import "RKBeerDetailViewController.h"
 
 
 @implementation RKBeerTableViewController {
@@ -56,7 +56,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RKBeer *selectedBeer = [_beers objectAtIndex:indexPath.row];
 
-    RKBeerViewController *detailViewController = [[RKBeerViewController alloc] initWithBeer:selectedBeer];
+    RKBeerDetailViewController *detailViewController = [[RKBeerDetailViewController alloc] initWithBeer:selectedBeer];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

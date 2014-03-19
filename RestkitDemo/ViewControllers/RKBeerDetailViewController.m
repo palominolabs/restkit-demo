@@ -2,12 +2,12 @@
  * Copyright (c) 2013 Palomino Labs, Inc.
  */
 
-#import "RKBeerViewController.h"
+#import "RKBeerDetailViewController.h"
 #import "RKBeer.h"
 #import "RKBeerDetailView.h"
 
 
-@implementation RKBeerViewController {
+@implementation RKBeerDetailViewController {
     RKBeer *_beer;
 }
 

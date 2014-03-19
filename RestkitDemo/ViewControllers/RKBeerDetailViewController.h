@@ -7,7 +7,7 @@
 @class RKBeer;
 
 
-@interface RKBeerViewController : UIViewController
+@interface RKBeerDetailViewController : UIViewController
 - (instancetype)initWithBeer:(RKBeer *)beer;
 
 @end
