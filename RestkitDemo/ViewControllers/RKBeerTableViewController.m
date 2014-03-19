@@ -5,6 +5,7 @@
 #import "RKBeerTableViewController.h"
 #import "RKBeer.h"
 #import "RKBeerTableViewCell.h"
+#import "RKBeerViewController.h"
 
 
 @implementation RKBeerTableViewController {
@@ -14,6 +15,8 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.tableView.allowsSelection = YES;
+
         RKBeer *beer1 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
         RKBeer *beer2 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"Another Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
         RKBeer *beer3 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Third Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
@@ -47,6 +50,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+#pragma mark UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    RKBeer *selectedBeer = [_beers objectAtIndex:indexPath.row];
+
+    RKBeerViewController *detailViewController = [[RKBeerViewController alloc] initWithBeer:selectedBeer];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
