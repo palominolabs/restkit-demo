@@ -1,4 +1,4 @@
-pod 'RestKit', '0.21.0'
+pod 'RestKit', '0.20.1'
 pod 'MBProgressHUD', '0.8'
 pod 'GoogleAnalytics-iOS-SDK', '3.0.2'
 pod 'KISSmetrics', '1.1.3'
