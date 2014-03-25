@@ -17,6 +17,10 @@
     if (self) {
         self.tableView.allowsSelection = YES;
 
+        UIImageView *bgImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+
+        self.tableView.backgroundView = bgImgView;
+
         RKBeer *beer1 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
         RKBeer *beer2 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"Another Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
         RKBeer *beer3 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Third Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];

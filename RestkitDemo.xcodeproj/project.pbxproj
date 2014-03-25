@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1788302A6203A5D7C8661867 /* ps-table-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1788345A433FBF9EAA7338E5 /* ps-table-background@2x.png */; };
 		178832183BA5241A4F01D254 /* UIView+UIViewLayoutAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 178834725C859EF54D54013F /* UIView+UIViewLayoutAdditions.m */; };
 		1788326113598A9A978A1151 /* RKBeerDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 178837F31D29A86B49AC36B1 /* RKBeerDetailView.m */; };
+		178832F1DE50062DF71A9E06 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883208081554AC50B892EC /* background.png */; };
 		1788341A2E9E010F6DCB56D1 /* RKBeer.m in Sources */ = {isa = PBXBuildFile; fileRef = 178835F4DD63898FAC394570 /* RKBeer.m */; };
 		178834464B7DCB2EA5207BAC /* RKBeerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178839BEC9A8BA5E2F1DEAA2 /* RKBeerTableViewController.m */; };
+		178837DE4FBFB2246BCECAE4 /* ps-table-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883B4FCE0099E72290C622 /* ps-table-background.png */; };
 		17883803E7B80BB0BE19D723 /* RKBeerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788383A036E8AF683C1FADE /* RKBeerDetailViewController.m */; };
 		17883A1C099175A78B5DFB82 /* RKBeerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788310F7FFD8D0C14069F72 /* RKBeerTableViewCell.m */; };
 		35A4B041C28C22AEE734FE56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4B1D48A42BC1BCFA2C8AB /* InfoPlist.strings */; };
@@ -73,7 +76,9 @@
 
 /* Begin PBXFileReference section */
 		1788310F7FFD8D0C14069F72 /* RKBeerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerTableViewCell.m; sourceTree = "<group>"; };
+		17883208081554AC50B892EC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		17883217F34424E9F875C08A /* RKBeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeer.h; sourceTree = "<group>"; };
+		1788345A433FBF9EAA7338E5 /* ps-table-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ps-table-background@2x.png"; sourceTree = "<group>"; };
 		178834725C859EF54D54013F /* UIView+UIViewLayoutAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewLayoutAdditions.m"; sourceTree = "<group>"; };
 		178835F4DD63898FAC394570 /* RKBeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeer.m; sourceTree = "<group>"; };
 		1788365E7BF002ACA31078F3 /* RKBeerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerTableViewCell.h; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		1788383A036E8AF683C1FADE /* RKBeerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerDetailViewController.m; sourceTree = "<group>"; };
 		178838A2CE938A9C33CB567A /* RKBeerDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerDetailView.h; sourceTree = "<group>"; };
 		178839BEC9A8BA5E2F1DEAA2 /* RKBeerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerTableViewController.m; sourceTree = "<group>"; };
+		17883B4FCE0099E72290C622 /* ps-table-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ps-table-background.png"; sourceTree = "<group>"; };
 		17883B5F3DA1FE1D9738421B /* UIView+UIViewLayoutAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewLayoutAdditions.h"; sourceTree = "<group>"; };
 		180BE055CC254920B574CE7A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A4B023D7A7CB990F389946 /* NSData+STAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+STAdditions.m"; sourceTree = "<group>"; };
@@ -219,6 +225,16 @@
 				1788380ACF39AF9898992108 /* RKBeerDetailViewController.h */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		17883C76F421B1D41C6724D0 /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				17883B4FCE0099E72290C622 /* ps-table-background.png */,
+				1788345A433FBF9EAA7338E5 /* ps-table-background@2x.png */,
+				17883208081554AC50B892EC /* background.png */,
+			);
+			path = Skin;
 			sourceTree = "<group>";
 		};
 		17883EE819B6B0F034723385 /* Data */ = {
@@ -369,6 +385,7 @@
 				178838EB8664DBBF2136FBD2 /* ViewControllers */,
 				17883EE819B6B0F034723385 /* Data */,
 				1788368ADC933C587F09B9BA /* Views */,
+				17883C76F421B1D41C6724D0 /* Skin */,
 			);
 			path = RestkitDemo;
 			sourceTree = "<group>";
@@ -508,6 +525,9 @@
 				35A4BAABBC8554638A55269C /* Default@2x.png in Resources */,
 				35A4B458437690B8A29D1777 /* Default-568h@2x.png in Resources */,
 				9497316117129BEE002A8AB0 /* entities.strings in Resources */,
+				178837DE4FBFB2246BCECAE4 /* ps-table-background.png in Resources */,
+				1788302A6203A5D7C8661867 /* ps-table-background@2x.png in Resources */,
+				178832F1DE50062DF71A9E06 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
