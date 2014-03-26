@@ -26,12 +26,6 @@
         self.tableView.tableFooterView = [UIView new];
         self.tableView.allowsSelection = YES;
 
-/*        RKBeer *beer1 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
-        RKBeer *beer2 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:2] name:@"Another Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
-        RKBeer *beer3 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:3] name:@"A Third Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
-
-        _beers = @[beer1, beer2, beer3];*/
-
         [self getBeers];
     }
 
