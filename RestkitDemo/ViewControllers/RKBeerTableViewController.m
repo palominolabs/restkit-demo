@@ -26,14 +26,36 @@
         self.tableView.tableFooterView = [UIView new];
         self.tableView.allowsSelection = YES;
 
-        RKBeer *beer1 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
+/*        RKBeer *beer1 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
         RKBeer *beer2 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:2] name:@"Another Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
         RKBeer *beer3 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:3] name:@"A Third Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
 
-        _beers = @[beer1, beer2, beer3];
+        _beers = @[beer1, beer2, beer3];*/
+
+        [self getBeers];
     }
 
     return self;
+}
+
+-(void) getBeers {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKBeer class]];
+    [mapping addAttributeMappingsFromDictionary:@{
+            @"id" : @"beerId",
+            @"name" : @"name"
+    }];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:@"/beers.json" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com/beers.json"]];
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        _beers = result.array;
+        [self.tableView reloadData];
+        NSLog(@"Mapped the beers");
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"Failed with error: %@", [error localizedDescription]);
+    }];
+    [operation start];
 }
 
 #pragma mark UITableViewDataSource
