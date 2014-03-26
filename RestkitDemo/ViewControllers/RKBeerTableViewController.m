@@ -6,6 +6,8 @@
 #import "RKBeer.h"
 #import "RKBeerTableViewCell.h"
 #import "RKBeerDetailViewController.h"
+#import "RKBeerFooterView.h"
+#import "UIView+UIViewLayoutAdditions.h"
 
 
 @implementation RKBeerTableViewController {
@@ -15,14 +17,18 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.tableView.allowsSelection = YES;
+        self.title = @"Beers";
 
         UIImageView *bgImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+
+        RKBeerFooterView *footerView = [RKBeerFooterView new];
+        footerView.frame = CGRectMake(0, self.view.height - 50, self.view.width, 50);
 
         self.tableView.backgroundView = bgImgView;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.tableView.separatorColor = [UIColor blackColor];
-        self.tableView.tableFooterView = [UIView new];
+        self.tableView.tableFooterView = footerView;
+        self.tableView.allowsSelection = YES;
 
         RKBeer *beer1 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"A Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];
         RKBeer *beer2 = [[RKBeer alloc] initWithId:[NSNumber numberWithInt:1] name:@"Another Beer" createdOn:[NSDate new] updatedOn:[NSDate new] breweryId:[NSNumber numberWithInt:1] inventory:[NSNumber numberWithInt:1]];

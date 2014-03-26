@@ -18,13 +18,35 @@
 {
     [PLStartup shared];
 
+    [self initializeStyles];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
-    RKBeerTableViewController *startingViewController = [RKBeerTableViewController new];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:startingViewController];
-    self.window.rootViewController = navigationController;
+
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+
+    UINavigationController *beerListNavController = [[UINavigationController alloc]
+            initWithRootViewController:[RKBeerTableViewController new]];
+    beerListNavController.tabBarItem = [[UITabBarItem alloc]
+            initWithTitle:@"Beers" image:[UIImage imageNamed:@"beerBottleIcon"] tag:0];
+
+    UINavigationController *breweryListNavController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
+    breweryListNavController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Breweries" image:[UIImage imageNamed:@"brewery mockup icon"] tag:1];
+
+    tabBarController.viewControllers = @[beerListNavController, breweryListNavController];
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
+
     return YES;
+}
+
+-(void) initializeStyles {
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+            NSForegroundColorAttributeName : [UIColor whiteColor]
+    }];
+
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"tmpStatusBg"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
