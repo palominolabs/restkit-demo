@@ -6,6 +6,8 @@
 #import "PLAppDelegate.h"
 #import "RKBeerTableViewController.h"
 #import "RKBreweryTableViewController.h"
+#import "RKBeer.h"
+#import "RKBeerListResponse.h"
 #import <Crashlytics/Crashlytics.h>
 
 @implementation PLAppDelegate
@@ -20,6 +22,8 @@
     [PLStartup shared];
 
     [self initializeStyles];
+
+    [self initializeRestkit];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -51,6 +55,34 @@
 
     [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabBackground"]];
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+}
+
+-(void)initializeRestkit {
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com"]];
+
+    RKObjectMapping *beerMapping = [RKObjectMapping mappingForClass:[RKBeer class]];
+    [beerMapping addAttributeMappingsFromDictionary:@{
+            @"name" : @"name",
+            @"id" : @"beerId",
+            @"inventory" : @"inventory",
+            @"average_rating" : @"averageRating",
+            @"reviews_count" : @"reviewsCount",
+            @"brewery" : @"brewery"
+    }];
+
+    RKObjectMapping *beerListMapping = [RKObjectMapping mappingForClass:[RKBeerListResponse class]];
+    [beerListMapping addAttributeMappingsFromDictionary:@{
+            @"meta" : @"metadata"
+    }];
+    [beerListMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"beers"
+                                                                            toKeyPath:@"beers"
+                                                                          withMapping:beerMapping]];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:beerListMapping pathPattern:@"/beers.json" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    [objectManager addResponseDescriptor:responseDescriptor];
+
+    [RKObjectManager setSharedManager:objectManager];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

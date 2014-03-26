@@ -34,37 +34,19 @@
 }
 
 -(void) getBeers {
-    RKObjectMapping *beerMapping = [RKObjectMapping mappingForClass:[RKBeer class]];
-    [beerMapping addAttributeMappingsFromDictionary:@{
-            @"name" : @"name",
-            @"id" : @"beerId",
-            @"inventory" : @"inventory",
-            @"average_rating" : @"averageRating",
-            @"reviews_count" : @"reviewsCount",
-            @"brewery" : @"brewery"
-    }];
-    RKResponseDescriptor *beerResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:beerMapping pathPattern:nil keyPath:@"beers" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKBeerListResponse class]];
-    [mapping addAttributeMappingsFromDictionary:@{
-            @"meta" : @"metadata"
-    }];
-    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"beers"
-                                                                            toKeyPath:@"beers"
-                                                                          withMapping:beerMapping]];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:@"/beers.json" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com/beers.json"]];
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor, beerResponseDescriptor]];
-    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-        RKBeerListResponse *listResponse = result.firstObject;
-        _beers = listResponse.beers;
-        [self.tableView reloadData];
-        NSLog(@"Mapped the beers");
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"Failed with error: %@", [error localizedDescription]);
-    }];
-    [operation start];
+    NSString *path = @"/beers.json";
+    [[RKObjectManager sharedManager]
+            getObjectsAtPath:path
+                  parameters:nil
+                     success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                         RKBeerListResponse *listResponse = result.firstObject;
+                         _beers = listResponse.beers;
+                         [self.tableView reloadData];
+                         NSLog(@"Mapped the beers");
+                     }
+                     failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                         NSLog(@"Failed with error: %@", [error localizedDescription]);
+                     }];
 }
 
 #pragma mark UITableViewDataSource
