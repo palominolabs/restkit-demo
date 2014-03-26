@@ -7,14 +7,11 @@
 
 @interface RKBeer : NSObject
 
-@property (nonatomic, readonly) NSNumber *beerId;
 @property (nonatomic, readonly) NSString *name;
-@property (nonatomic, readonly) NSDate *createdOn;
-@property (nonatomic, readonly) NSDate *updatedOn;
-@property (nonatomic, readonly) NSNumber *breweryId;
+@property (nonatomic, readonly) NSNumber *beerId;
 @property (nonatomic, readonly) NSNumber *inventory;
-
-- (instancetype)initWithId:(NSNumber *)anId name:(NSString *)aName createdOn:(NSDate *)aCreatedOn updatedOn:(NSDate *)anUpdatedOn breweryId:(NSNumber *)aBreweryId inventory:(NSNumber *)anInventory;
-
+@property (nonatomic, readonly) NSNumber *averageRating;
+@property (nonatomic, readonly) NSNumber *reviewsCount;
+@property (nonatomic, readonly) NSDictionary *brewery;
 
 @end

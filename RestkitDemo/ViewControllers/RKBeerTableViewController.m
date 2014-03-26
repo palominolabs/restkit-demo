@@ -34,17 +34,31 @@
 }
 
 -(void) getBeers {
+    RKObjectMapping *beerMapping = [RKObjectMapping mappingForClass:[RKBeer class]];
+    [beerMapping addAttributeMappingsFromDictionary:@{
+            @"name" : @"name",
+            @"id" : @"beerId",
+            @"inventory" : @"inventory",
+            @"average_rating" : @"averageRating",
+            @"reviews_count" : @"reviewsCount",
+            @"brewery" : @"brewery"
+    }];
+    RKResponseDescriptor *beerResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:beerMapping pathPattern:nil keyPath:@"beers" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKBeerListResponse class]];
     [mapping addAttributeMappingsFromDictionary:@{
-            @"beers" : @"beers",
             @"meta" : @"metadata"
     }];
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"beers"
+                                                                            toKeyPath:@"beers"
+                                                                          withMapping:beerMapping]];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:@"/beers.json" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com/beers.json"]];
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor, beerResponseDescriptor]];
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
         _beers = result.array;
+        RKBeerListResponse *listResponse = [result firstObject];
         [self.tableView reloadData];
         NSLog(@"Mapped the beers");
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
