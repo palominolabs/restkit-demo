@@ -8,6 +8,8 @@
 #import "RKBeerDetailViewController.h"
 #import "UIView+UIViewLayoutAdditions.h"
 #import "RKBeerListResponse.h"
+#import "RKBeerForm.h"
+#import "RKAddBeerRequest.h"
 
 
 @implementation RKBeerTableViewController {
@@ -27,10 +29,34 @@
         self.tableView.tableFooterView = [UIView new];
         self.tableView.allowsSelection = YES;
 
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add Beer" style:UIBarButtonItemStyleBordered target:self action:@selector(addBeer)];
+
         [self getBeers];
     }
 
     return self;
+}
+
+- (void)addBeer {
+    RKBeerForm *beerForm = [RKBeerForm new];
+    beerForm.name = @"A Beer From Restkit";
+    beerForm.inventory = [NSNumber numberWithInt:45];
+    beerForm.breweryId = [NSNumber numberWithInt:1];
+
+    RKAddBeerRequest *addBeerRequest = [RKAddBeerRequest new];
+    addBeerRequest.beer_form = beerForm;
+
+    NSString *path = @"beers.json";
+    [[RKObjectManager sharedManager]
+            postObject:addBeerRequest
+                  path:path
+            parameters:nil
+               success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                   NSLog(@"successfully added beer");
+               }
+               failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                   NSLog(@"error adding beer");
+               }];
 }
 
 -(void) getBeers {

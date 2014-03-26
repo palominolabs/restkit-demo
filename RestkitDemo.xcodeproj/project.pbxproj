@@ -14,6 +14,7 @@
 		178832F8036CD53BDBF9A553 /* brewery mockup icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883A7296569B496A3CCF45 /* brewery mockup icon.png */; };
 		1788331DD7978A34AD9E81B3 /* cismontane logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1788334C73334B722974D35C /* cismontane logo.png */; };
 		1788335922C961E26D6254A6 /* RKBreweryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17883D9835144EF1696BA2CB /* RKBreweryTableViewCell.m */; };
+		178833DE69F740558940656E /* RKAddBeerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788313B772E75285B8BF310 /* RKAddBeerRequest.m */; };
 		1788341A2E9E010F6DCB56D1 /* RKBeer.m in Sources */ = {isa = PBXBuildFile; fileRef = 178835F4DD63898FAC394570 /* RKBeer.m */; };
 		178834464B7DCB2EA5207BAC /* RKBeerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178839BEC9A8BA5E2F1DEAA2 /* RKBeerTableViewController.m */; };
 		1788350D1FDA3B0486B51350 /* tabBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 178837621E26043CB6505E01 /* tabBackground.png */; };
@@ -29,6 +30,7 @@
 		17883B599BC84BA1B35393D4 /* tmpStatusBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 178839209B7060244B4982C3 /* tmpStatusBg.png */; };
 		17883CBAE56829CDB484774B /* devils canyon logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883F51484C7773C050B0A6 /* devils canyon logo.png */; };
 		17883D4292A7684FCE7F2C11 /* RKBreweryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17883DC0CA2F01DA19403CA0 /* RKBreweryTableViewController.m */; };
+		17883D554F41DE4944B3E636 /* RKBeerForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 17883BF98CCC3A773830FB8F /* RKBeerForm.m */; };
 		17883DF28F5F021D462283EC /* RKBrewery.m in Sources */ = {isa = PBXBuildFile; fileRef = 17883C584D338B38EA403E6F /* RKBrewery.m */; };
 		17883DF66A17E758CC36C5B3 /* beerBottleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883D164DBFA217A85E2A3C /* beerBottleIcon.png */; };
 		35A4B041C28C22AEE734FE56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4B1D48A42BC1BCFA2C8AB /* InfoPlist.strings */; };
@@ -91,6 +93,7 @@
 
 /* Begin PBXFileReference section */
 		1788310F7FFD8D0C14069F72 /* RKBeerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerTableViewCell.m; sourceTree = "<group>"; };
+		1788313B772E75285B8BF310 /* RKAddBeerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKAddBeerRequest.m; sourceTree = "<group>"; };
 		1788315F0D1E2FE80421E1A1 /* beer-bottle-clipart-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer-bottle-clipart-4.png"; sourceTree = "<group>"; };
 		17883208081554AC50B892EC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		17883217F34424E9F875C08A /* RKBeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeer.h; sourceTree = "<group>"; };
@@ -116,8 +119,10 @@
 		17883A7296569B496A3CCF45 /* brewery mockup icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brewery mockup icon.png"; sourceTree = "<group>"; };
 		17883B4FCE0099E72290C622 /* ps-table-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ps-table-background.png"; sourceTree = "<group>"; };
 		17883B5F3DA1FE1D9738421B /* UIView+UIViewLayoutAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewLayoutAdditions.h"; sourceTree = "<group>"; };
+		17883BF98CCC3A773830FB8F /* RKBeerForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerForm.m; sourceTree = "<group>"; };
 		17883C42C702650905F92396 /* star rating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star rating.png"; sourceTree = "<group>"; };
 		17883C584D338B38EA403E6F /* RKBrewery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBrewery.m; sourceTree = "<group>"; };
+		17883CB70933620D35ADC0AD /* RKAddBeerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKAddBeerRequest.h; sourceTree = "<group>"; };
 		17883D164DBFA217A85E2A3C /* beerBottleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beerBottleIcon.png; sourceTree = "<group>"; };
 		17883D4C7982AAC76A663496 /* RKBeerListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerListResponse.h; sourceTree = "<group>"; };
 		17883D6F59286787C0527485 /* RKBreweryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBreweryDetailViewController.m; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 		17883DC0CA2F01DA19403CA0 /* RKBreweryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBreweryTableViewController.m; sourceTree = "<group>"; };
 		17883E188DFEAEB1CB7C08C8 /* RKBreweryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBreweryTableViewController.h; sourceTree = "<group>"; };
 		17883F51484C7773C050B0A6 /* devils canyon logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devils canyon logo.png"; sourceTree = "<group>"; };
+		17883F7C694FFBD9F3792FA2 /* RKBeerForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerForm.h; sourceTree = "<group>"; };
 		180BE055CC254920B574CE7A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A4B023D7A7CB990F389946 /* NSData+STAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+STAdditions.m"; sourceTree = "<group>"; };
 		35A4B02AC3D536502289033F /* RestkitDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestkitDemoTests.h; sourceTree = "<group>"; };
@@ -297,6 +303,10 @@
 				17883497ED2D1C7FA01BD92F /* RKBrewery.h */,
 				178838A50C681FD520A23ADC /* RKBeerListResponse.m */,
 				17883D4C7982AAC76A663496 /* RKBeerListResponse.h */,
+				1788313B772E75285B8BF310 /* RKAddBeerRequest.m */,
+				17883CB70933620D35ADC0AD /* RKAddBeerRequest.h */,
+				17883BF98CCC3A773830FB8F /* RKBeerForm.m */,
+				17883F7C694FFBD9F3792FA2 /* RKBeerForm.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -708,6 +718,8 @@
 				1788335922C961E26D6254A6 /* RKBreweryTableViewCell.m in Sources */,
 				1788399DD1E1FE1F11007D4D /* RKBreweryDetailViewController.m in Sources */,
 				1788378C1BC8DE6BFB5015AD /* RKBeerListResponse.m in Sources */,
+				178833DE69F740558940656E /* RKAddBeerRequest.m in Sources */,
+				17883D554F41DE4944B3E636 /* RKBeerForm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

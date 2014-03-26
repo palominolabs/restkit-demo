@@ -8,6 +8,8 @@
 #import "RKBreweryTableViewController.h"
 #import "RKBeer.h"
 #import "RKBeerListResponse.h"
+#import "RKAddBeerRequest.h"
+#import "RKBeerForm.h"
 #import <Crashlytics/Crashlytics.h>
 
 @implementation PLAppDelegate
@@ -60,7 +62,10 @@
 -(void)initializeRestkit {
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
 
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com"]];
+    //RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com"]];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
+    [[objectManager HTTPClient] setDefaultHeader:@"Content-Type" value:@"application/json"];
+    [[RKObjectManager sharedManager].HTTPClient setDefaultHeader:@"Accept" value:@"application/json"];
 
     RKObjectMapping *beerMapping = [RKObjectMapping mappingForClass:[RKBeer class]];
     [beerMapping addAttributeMappingsFromDictionary:@{
@@ -81,6 +86,19 @@
                                                                           withMapping:beerMapping]];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:beerListMapping pathPattern:@"/beers.json" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     [objectManager addResponseDescriptor:responseDescriptor];
+
+    RKObjectMapping *beerFormMapping = [RKObjectMapping requestMapping];
+    [beerFormMapping addAttributeMappingsFromDictionary:@{
+            @"name" : @"name",
+            @"inventory" : @"inventory",
+            @"breweryId" : @"brewery_id"
+    }];
+
+    RKObjectMapping *addBeerRequestMapping = [RKObjectMapping requestMapping];
+    [addBeerRequestMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"beer_form"
+                                                                                          toKeyPath:@"beer_form"
+                                                                                        withMapping:beerFormMapping]];
+    [objectManager addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:addBeerRequestMapping objectClass:[RKAddBeerRequest class] rootKeyPath:nil]];
 
     [RKObjectManager setSharedManager:objectManager];
 }
