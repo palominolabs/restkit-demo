@@ -16,7 +16,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.title = @"Beers";
+        self.title = @"Breweries";
 
         UIImageView *bgImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
 
