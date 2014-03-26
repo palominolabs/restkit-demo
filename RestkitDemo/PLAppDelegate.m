@@ -47,6 +47,9 @@
 
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"tmpStatusBg"] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabBackground"]];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -14,13 +14,13 @@
 		178832F8036CD53BDBF9A553 /* brewery mockup icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883A7296569B496A3CCF45 /* brewery mockup icon.png */; };
 		1788341A2E9E010F6DCB56D1 /* RKBeer.m in Sources */ = {isa = PBXBuildFile; fileRef = 178835F4DD63898FAC394570 /* RKBeer.m */; };
 		178834464B7DCB2EA5207BAC /* RKBeerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178839BEC9A8BA5E2F1DEAA2 /* RKBeerTableViewController.m */; };
+		1788350D1FDA3B0486B51350 /* tabBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 178837621E26043CB6505E01 /* tabBackground.png */; };
 		178835D74DFDC83F62DCD55A /* beer-bottle-clipart-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1788315F0D1E2FE80421E1A1 /* beer-bottle-clipart-4.png */; };
 		178837DE4FBFB2246BCECAE4 /* ps-table-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883B4FCE0099E72290C622 /* ps-table-background.png */; };
 		17883803E7B80BB0BE19D723 /* RKBeerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788383A036E8AF683C1FADE /* RKBeerDetailViewController.m */; };
 		1788391BCB50B94DA361AB74 /* tabButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 1788374AF572BA27EB0B1D68 /* tabButtons.png */; };
 		17883A1C099175A78B5DFB82 /* RKBeerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788310F7FFD8D0C14069F72 /* RKBeerTableViewCell.m */; };
 		17883B599BC84BA1B35393D4 /* tmpStatusBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 178839209B7060244B4982C3 /* tmpStatusBg.png */; };
-		17883D504C512D85115B6C78 /* RKBeerFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788365DFED9BF5719FA322A /* RKBeerFooterView.m */; };
 		17883DF66A17E758CC36C5B3 /* beerBottleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883D164DBFA217A85E2A3C /* beerBottleIcon.png */; };
 		35A4B041C28C22AEE734FE56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4B1D48A42BC1BCFA2C8AB /* InfoPlist.strings */; };
 		35A4B09D56C4FA16FF8494C3 /* NSFileHandle+STAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B44D500515DB9F4F1ABB /* NSFileHandle+STAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -88,10 +88,10 @@
 		1788345A433FBF9EAA7338E5 /* ps-table-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ps-table-background@2x.png"; sourceTree = "<group>"; };
 		178834725C859EF54D54013F /* UIView+UIViewLayoutAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewLayoutAdditions.m"; sourceTree = "<group>"; };
 		178835F4DD63898FAC394570 /* RKBeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeer.m; sourceTree = "<group>"; };
-		1788365DFED9BF5719FA322A /* RKBeerFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerFooterView.m; sourceTree = "<group>"; };
 		1788365E7BF002ACA31078F3 /* RKBeerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerTableViewCell.h; sourceTree = "<group>"; };
 		17883706FD5BD88CB53B356D /* RKBeerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerTableViewController.h; sourceTree = "<group>"; };
 		1788374AF572BA27EB0B1D68 /* tabButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabButtons.png; sourceTree = "<group>"; };
+		178837621E26043CB6505E01 /* tabBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBackground.png; sourceTree = "<group>"; };
 		178837F31D29A86B49AC36B1 /* RKBeerDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerDetailView.m; sourceTree = "<group>"; };
 		1788380ACF39AF9898992108 /* RKBeerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerDetailViewController.h; sourceTree = "<group>"; };
 		1788383A036E8AF683C1FADE /* RKBeerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerDetailViewController.m; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 		17883B4FCE0099E72290C622 /* ps-table-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ps-table-background.png"; sourceTree = "<group>"; };
 		17883B5F3DA1FE1D9738421B /* UIView+UIViewLayoutAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewLayoutAdditions.h"; sourceTree = "<group>"; };
 		17883D164DBFA217A85E2A3C /* beerBottleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beerBottleIcon.png; sourceTree = "<group>"; };
-		17883EFE5B79E4740079C8B7 /* RKBeerFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerFooterView.h; sourceTree = "<group>"; };
 		180BE055CC254920B574CE7A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A4B023D7A7CB990F389946 /* NSData+STAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+STAdditions.m"; sourceTree = "<group>"; };
 		35A4B02AC3D536502289033F /* RestkitDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestkitDemoTests.h; sourceTree = "<group>"; };
@@ -225,8 +224,6 @@
 				1788365E7BF002ACA31078F3 /* RKBeerTableViewCell.h */,
 				178837F31D29A86B49AC36B1 /* RKBeerDetailView.m */,
 				178838A2CE938A9C33CB567A /* RKBeerDetailView.h */,
-				1788365DFED9BF5719FA322A /* RKBeerFooterView.m */,
-				17883EFE5B79E4740079C8B7 /* RKBeerFooterView.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +250,7 @@
 				1788315F0D1E2FE80421E1A1 /* beer-bottle-clipart-4.png */,
 				17883D164DBFA217A85E2A3C /* beerBottleIcon.png */,
 				17883A7296569B496A3CCF45 /* brewery mockup icon.png */,
+				178837621E26043CB6505E01 /* tabBackground.png */,
 			);
 			path = Skin;
 			sourceTree = "<group>";
@@ -553,6 +551,7 @@
 				178835D74DFDC83F62DCD55A /* beer-bottle-clipart-4.png in Resources */,
 				17883DF66A17E758CC36C5B3 /* beerBottleIcon.png in Resources */,
 				178832F8036CD53BDBF9A553 /* brewery mockup icon.png in Resources */,
+				1788350D1FDA3B0486B51350 /* tabBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,7 +662,6 @@
 				178832183BA5241A4F01D254 /* UIView+UIViewLayoutAdditions.m in Sources */,
 				17883803E7B80BB0BE19D723 /* RKBeerDetailViewController.m in Sources */,
 				1788326113598A9A978A1151 /* RKBeerDetailView.m in Sources */,
-				17883D504C512D85115B6C78 /* RKBeerFooterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

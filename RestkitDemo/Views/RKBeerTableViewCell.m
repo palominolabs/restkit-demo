@@ -17,7 +17,8 @@
     self = [super init];
     if (self) {
         _nameLabel = [UILabel new];
-        _nameLabel.textColor = [UIColor redColor];
+
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
         [self addSubview:_nameLabel];
     }
