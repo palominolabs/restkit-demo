@@ -9,6 +9,6 @@
 
 @interface RKAddBeerRequest : NSObject
 
-@property (nonatomic, readwrite) RKBeerForm *beer_form;
+@property (nonatomic, readwrite) RKBeerForm *beerForm;
 
 @end

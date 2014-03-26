@@ -95,7 +95,7 @@
     }];
 
     RKObjectMapping *addBeerRequestMapping = [RKObjectMapping requestMapping];
-    [addBeerRequestMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"beer_form"
+    [addBeerRequestMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"beerForm"
                                                                                           toKeyPath:@"beer_form"
                                                                                         withMapping:beerFormMapping]];
     [objectManager addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:addBeerRequestMapping objectClass:[RKAddBeerRequest class] rootKeyPath:nil]];

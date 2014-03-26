@@ -44,7 +44,7 @@
     beerForm.breweryId = [NSNumber numberWithInt:1];
 
     RKAddBeerRequest *addBeerRequest = [RKAddBeerRequest new];
-    addBeerRequest.beer_form = beerForm;
+    addBeerRequest.beerForm = beerForm;
 
     NSString *path = @"beers.json";
     [[RKObjectManager sharedManager]

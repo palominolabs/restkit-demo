@@ -9,5 +9,5 @@
 @implementation RKAddBeerRequest {
 
 }
-@synthesize beer_form;
+@synthesize beerForm;
 @end
