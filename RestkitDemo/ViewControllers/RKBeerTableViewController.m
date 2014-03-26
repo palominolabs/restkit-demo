@@ -57,8 +57,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com/beers.json"]];
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor, beerResponseDescriptor]];
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-        _beers = result.array;
-        RKBeerListResponse *listResponse = [result firstObject];
+        RKBeerListResponse *listResponse = result.firstObject;
+        _beers = listResponse.beers;
         [self.tableView reloadData];
         NSLog(@"Mapped the beers");
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
