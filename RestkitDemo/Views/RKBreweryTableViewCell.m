@@ -37,6 +37,7 @@
 
 -(void) setBrewery:(RKBrewery *)brewery {
     _brewery = brewery;
+    _nameLabel.text = brewery.name;
     [self setNeedsLayout];
 }
 

@@ -5,6 +5,7 @@
 
 #import "PLAppDelegate.h"
 #import "RKBeerTableViewController.h"
+#import "RKBreweryTableViewController.h"
 #import <Crashlytics/Crashlytics.h>
 
 @implementation PLAppDelegate
@@ -31,7 +32,7 @@
     beerListNavController.tabBarItem = [[UITabBarItem alloc]
             initWithTitle:@"Beers" image:[UIImage imageNamed:@"beerBottleIcon"] tag:0];
 
-    UINavigationController *breweryListNavController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
+    UINavigationController *breweryListNavController = [[UINavigationController alloc] initWithRootViewController:[RKBreweryTableViewController new]];
     breweryListNavController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Breweries" image:[UIImage imageNamed:@"brewery mockup icon"] tag:1];
 
     tabBarController.viewControllers = @[beerListNavController, breweryListNavController];
