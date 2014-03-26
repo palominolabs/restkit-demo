@@ -19,6 +19,7 @@
 		1788350D1FDA3B0486B51350 /* tabBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 178837621E26043CB6505E01 /* tabBackground.png */; };
 		178835CF627B7A546738F8B2 /* star rating.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883C42C702650905F92396 /* star rating.png */; };
 		178835D74DFDC83F62DCD55A /* beer-bottle-clipart-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1788315F0D1E2FE80421E1A1 /* beer-bottle-clipart-4.png */; };
+		1788378C1BC8DE6BFB5015AD /* RKBeerListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 178838A50C681FD520A23ADC /* RKBeerListResponse.m */; };
 		178837DE1B3F17341E041ED4 /* bruery logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1788329EE19FAE5A91EEA3B4 /* bruery logo.png */; };
 		178837DE4FBFB2246BCECAE4 /* ps-table-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883B4FCE0099E72290C622 /* ps-table-background.png */; };
 		17883803E7B80BB0BE19D723 /* RKBeerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788383A036E8AF683C1FADE /* RKBeerDetailViewController.m */; };
@@ -108,6 +109,7 @@
 		1788380ACF39AF9898992108 /* RKBeerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerDetailViewController.h; sourceTree = "<group>"; };
 		1788383A036E8AF683C1FADE /* RKBeerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerDetailViewController.m; sourceTree = "<group>"; };
 		178838A2CE938A9C33CB567A /* RKBeerDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerDetailView.h; sourceTree = "<group>"; };
+		178838A50C681FD520A23ADC /* RKBeerListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerListResponse.m; sourceTree = "<group>"; };
 		178839209B7060244B4982C3 /* tmpStatusBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpStatusBg.png; sourceTree = "<group>"; };
 		178839BEC9A8BA5E2F1DEAA2 /* RKBeerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerTableViewController.m; sourceTree = "<group>"; };
 		17883A573AFE026553230D13 /* RKBreweryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBreweryTableViewCell.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		17883C42C702650905F92396 /* star rating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star rating.png"; sourceTree = "<group>"; };
 		17883C584D338B38EA403E6F /* RKBrewery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBrewery.m; sourceTree = "<group>"; };
 		17883D164DBFA217A85E2A3C /* beerBottleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beerBottleIcon.png; sourceTree = "<group>"; };
+		17883D4C7982AAC76A663496 /* RKBeerListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerListResponse.h; sourceTree = "<group>"; };
 		17883D6F59286787C0527485 /* RKBreweryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBreweryDetailViewController.m; sourceTree = "<group>"; };
 		17883D9835144EF1696BA2CB /* RKBreweryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBreweryTableViewCell.m; sourceTree = "<group>"; };
 		17883DC0CA2F01DA19403CA0 /* RKBreweryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBreweryTableViewController.m; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 				17883217F34424E9F875C08A /* RKBeer.h */,
 				17883C584D338B38EA403E6F /* RKBrewery.m */,
 				17883497ED2D1C7FA01BD92F /* RKBrewery.h */,
+				178838A50C681FD520A23ADC /* RKBeerListResponse.m */,
+				17883D4C7982AAC76A663496 /* RKBeerListResponse.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -702,6 +707,7 @@
 				17883DF28F5F021D462283EC /* RKBrewery.m in Sources */,
 				1788335922C961E26D6254A6 /* RKBreweryTableViewCell.m in Sources */,
 				1788399DD1E1FE1F11007D4D /* RKBreweryDetailViewController.m in Sources */,
+				1788378C1BC8DE6BFB5015AD /* RKBeerListResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

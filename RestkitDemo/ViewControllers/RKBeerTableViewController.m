@@ -7,6 +7,7 @@
 #import "RKBeerTableViewCell.h"
 #import "RKBeerDetailViewController.h"
 #import "UIView+UIViewLayoutAdditions.h"
+#import "RKBeerListResponse.h"
 
 
 @implementation RKBeerTableViewController {
@@ -33,10 +34,10 @@
 }
 
 -(void) getBeers {
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKBeer class]];
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKBeerListResponse class]];
     [mapping addAttributeMappingsFromDictionary:@{
-            @"id" : @"beerId",
-            @"name" : @"name"
+            @"beers" : @"beers",
+            @"meta" : @"metadata"
     }];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:@"/beers.json" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 
