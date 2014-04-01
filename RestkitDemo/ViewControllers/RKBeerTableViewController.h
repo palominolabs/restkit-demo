@@ -3,7 +3,8 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "RKBeerClientDelegate.h"
 
 
-@interface RKBeerTableViewController : UITableViewController
+@interface RKBeerTableViewController : UITableViewController <RKBeerClientDelegate>
 @end

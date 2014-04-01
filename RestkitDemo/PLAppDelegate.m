@@ -62,8 +62,8 @@
 -(void)initializeRestkit {
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
 
-    //RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com"]];
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://restkittechtalknoauth2a83.ninefold-apps.com"]];
+    //RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
     [[objectManager HTTPClient] setDefaultHeader:@"Content-Type" value:@"application/json"];
     [[RKObjectManager sharedManager].HTTPClient setDefaultHeader:@"Accept" value:@"application/json"];
 

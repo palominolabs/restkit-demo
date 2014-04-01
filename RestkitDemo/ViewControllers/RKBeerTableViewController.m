@@ -6,19 +6,20 @@
 #import "RKBeer.h"
 #import "RKBeerTableViewCell.h"
 #import "RKBeerDetailViewController.h"
-#import "UIView+UIViewLayoutAdditions.h"
 #import "RKBeerListResponse.h"
-#import "RKBeerForm.h"
-#import "RKAddBeerRequest.h"
+#import "RKBeerClient.h"
 
 
 @implementation RKBeerTableViewController {
+    RKBeerClient *_beerClient;
     NSArray *_beers;
 }
 
 - (id)init {
     self = [super init];
     if (self) {
+        _beerClient = [[RKBeerClient alloc] initWithDelegate:self];
+
         self.title = @"Beers";
 
         UIImageView *bgImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
@@ -38,42 +39,32 @@
 }
 
 - (void)addBeer {
-    RKBeerForm *beerForm = [RKBeerForm new];
-    beerForm.name = @"A Beer From Restkit";
-    beerForm.inventory = [NSNumber numberWithInt:45];
-    beerForm.breweryId = [NSNumber numberWithInt:1];
-
-    RKAddBeerRequest *addBeerRequest = [RKAddBeerRequest new];
-    addBeerRequest.beerForm = beerForm;
-
-    NSString *path = @"beers.json";
-    [[RKObjectManager sharedManager]
-            postObject:addBeerRequest
-                  path:path
-            parameters:nil
-               success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                   NSLog(@"successfully added beer");
-               }
-               failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                   NSLog(@"error adding beer");
-               }];
+    [_beerClient createBeer];
 }
 
 -(void) getBeers {
-    NSString *path = @"/beers.json";
-    [[RKObjectManager sharedManager]
-            getObjectsAtPath:path
-                  parameters:nil
-                     success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                         RKBeerListResponse *listResponse = result.firstObject;
-                         _beers = listResponse.beers;
-                         [self.tableView reloadData];
-                         NSLog(@"Mapped the beers");
-                     }
-                     failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                         NSLog(@"Failed with error: %@", [error localizedDescription]);
-                     }];
+    [_beerClient getBeers];
 }
+
+#pragma mark RKBeerClientDelegate
+- (void)getBeersSuccess:(RKObjectRequestOperation *)operation mappingResult:(RKMappingResult *)result {
+    RKBeerListResponse *listResponse = result.firstObject;
+    _beers = listResponse.beers;
+    [self.tableView reloadData];
+}
+
+- (void)getBeersError:(RKObjectRequestOperation *)operation error:(NSError *)error {
+    NSLog(@"Error retrieving beers");
+}
+
+- (void)createBeerSuccess:(RKObjectRequestOperation *)operation mappingResult:(RKMappingResult *)result {
+    NSLog(@"Created new beer");
+}
+
+- (void)createBeerError:(RKObjectRequestOperation *)operation error:(NSError *)error {
+    NSLog(@"Error creating beer");
+}
+
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

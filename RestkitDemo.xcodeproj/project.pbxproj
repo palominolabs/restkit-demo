@@ -33,6 +33,7 @@
 		17883D554F41DE4944B3E636 /* RKBeerForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 17883BF98CCC3A773830FB8F /* RKBeerForm.m */; };
 		17883DF28F5F021D462283EC /* RKBrewery.m in Sources */ = {isa = PBXBuildFile; fileRef = 17883C584D338B38EA403E6F /* RKBrewery.m */; };
 		17883DF66A17E758CC36C5B3 /* beerBottleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17883D164DBFA217A85E2A3C /* beerBottleIcon.png */; };
+		17883E2C2243E32DF800F911 /* RKBeerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 178833675403804A9EA7A279 /* RKBeerClient.m */; };
 		35A4B041C28C22AEE734FE56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A4B1D48A42BC1BCFA2C8AB /* InfoPlist.strings */; };
 		35A4B09D56C4FA16FF8494C3 /* NSFileHandle+STAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B44D500515DB9F4F1ABB /* NSFileHandle+STAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		35A4B1BBFE9230E467EB7309 /* NSDictionary+STAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BEE99C0575E657A8C68B /* NSDictionary+STAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -92,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1788303EBA996173F529AC89 /* RKBeerClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerClientDelegate.h; sourceTree = "<group>"; };
 		1788310F7FFD8D0C14069F72 /* RKBeerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerTableViewCell.m; sourceTree = "<group>"; };
 		1788313B772E75285B8BF310 /* RKAddBeerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKAddBeerRequest.m; sourceTree = "<group>"; };
 		1788315F0D1E2FE80421E1A1 /* beer-bottle-clipart-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer-bottle-clipart-4.png"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		1788329DFA69AAAAA9F6B6AF /* RKBreweryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBreweryDetailViewController.h; sourceTree = "<group>"; };
 		1788329EE19FAE5A91EEA3B4 /* bruery logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bruery logo.png"; sourceTree = "<group>"; };
 		1788334C73334B722974D35C /* cismontane logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cismontane logo.png"; sourceTree = "<group>"; };
+		178833675403804A9EA7A279 /* RKBeerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerClient.m; sourceTree = "<group>"; };
 		1788345A433FBF9EAA7338E5 /* ps-table-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ps-table-background@2x.png"; sourceTree = "<group>"; };
 		178834725C859EF54D54013F /* UIView+UIViewLayoutAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewLayoutAdditions.m"; sourceTree = "<group>"; };
 		17883497ED2D1C7FA01BD92F /* RKBrewery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBrewery.h; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		178838A2CE938A9C33CB567A /* RKBeerDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerDetailView.h; sourceTree = "<group>"; };
 		178838A50C681FD520A23ADC /* RKBeerListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerListResponse.m; sourceTree = "<group>"; };
 		178839209B7060244B4982C3 /* tmpStatusBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpStatusBg.png; sourceTree = "<group>"; };
+		1788399717DC1B991EE79D6F /* RKBeerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBeerClient.h; sourceTree = "<group>"; };
 		178839BEC9A8BA5E2F1DEAA2 /* RKBeerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBeerTableViewController.m; sourceTree = "<group>"; };
 		17883A573AFE026553230D13 /* RKBreweryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBreweryTableViewCell.h; sourceTree = "<group>"; };
 		17883A7296569B496A3CCF45 /* brewery mockup icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brewery mockup icon.png"; sourceTree = "<group>"; };
@@ -272,6 +276,16 @@
 				1788329DFA69AAAAA9F6B6AF /* RKBreweryDetailViewController.h */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		178839C40DE02D56A1102892 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				178833675403804A9EA7A279 /* RKBeerClient.m */,
+				1788399717DC1B991EE79D6F /* RKBeerClient.h */,
+				1788303EBA996173F529AC89 /* RKBeerClientDelegate.h */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 		17883C76F421B1D41C6724D0 /* Skin */ = {
@@ -451,6 +465,7 @@
 				17883EE819B6B0F034723385 /* Data */,
 				1788368ADC933C587F09B9BA /* Views */,
 				17883C76F421B1D41C6724D0 /* Skin */,
+				178839C40DE02D56A1102892 /* APIClient */,
 			);
 			path = RestkitDemo;
 			sourceTree = "<group>";
@@ -720,6 +735,7 @@
 				1788378C1BC8DE6BFB5015AD /* RKBeerListResponse.m in Sources */,
 				178833DE69F740558940656E /* RKAddBeerRequest.m in Sources */,
 				17883D554F41DE4944B3E636 /* RKBeerForm.m in Sources */,
+				17883E2C2243E32DF800F911 /* RKBeerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
